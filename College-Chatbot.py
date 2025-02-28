@@ -5,14 +5,14 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Set page config
-st.set_page_config(page_title="College Chatbot 🎓", page_icon="🎓", layout="centered")
+st.set_page_config(page_title="College Chatbot 🎓", layout="centered")
 
 # Initialize session state for chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
 # Load CSV from GitHub (replace with your actual URL)
-csv_url = "svecw_details.csv"
+csv_url = "college_faq.csv"
 
 try:
     df = pd.read_csv(csv_url)
